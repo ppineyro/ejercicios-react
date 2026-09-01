@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
@@ -63,7 +63,7 @@ export default function PokemonList() {
 
   return (
     <Stack spacing={2} sx={{ padding: 1 }}>
-      {pokemon.map((poke) => {
+      {pokemon.map((poke: PokemonItem) => {
         const pokemonId = poke.url.split('/').filter(Boolean).pop();
         
         const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
